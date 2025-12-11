@@ -77,6 +77,7 @@
     <label>Brush Size <input type="range" id="brushSize" min="2" max="40" value="5"></label>
     <button id="toggleDrawBtn">✋ Stop Drawing</button>
     <button id="clearBtn">Clear</button>
+    <button id="downloadBtn">💾 Download</button>
   </div>
 
   <!-- Canvas -->
@@ -177,6 +178,14 @@
     toggleBtn.addEventListener("click", () => {
       drawingEnabled = !drawingEnabled;
       toggleBtn.textContent = drawingEnabled ? "✋ Stop Drawing" : "🖌️ Start Drawing";
+    });
+
+    // Download drawing as PNG
+    document.getElementById("downloadBtn").addEventListener("click", () => {
+      const link = document.createElement('a');
+      link.download = `drawing-${Date.now()}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
     });
   </script>
 </body>
