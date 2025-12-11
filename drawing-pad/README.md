@@ -22,6 +22,7 @@
 * **✋ Stop Drawing / 🖌️ Start Drawing** – Toggle drawing mode on/off.
 * **🧹 Clear** – Wipe the canvas clean.
 * **Mouse / Touch** – Click or drag (desktop) / tap and move your finger (mobile) to draw.
+* **Download** - Download your drawing in PNG format.
 
 ---
 
